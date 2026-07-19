@@ -3,10 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "build": "tailwindcss -i ./input.css -o ./dist/output.css --minify"
+    "build": "tailwindcss -i ./input.css -o ./dist/output.css --minify",
+    "dev": "concurrently -k \"npm:dev:css\" \"npm:dev:serve\"",
+    "dev:css": "tailwindcss -i ./input.css -o ./output.css --watch",
+    "dev:serve": "serve -l 3000 ."
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.2",
+    "concurrently": "^9.1.0",
+    "serve": "^14.2.4",
     "tailwindcss": "^4.2.2"
   }
 }
