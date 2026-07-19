@@ -1,0 +1,12 @@
+{
+  "name": "nipponpippon",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "tailwindcss -i ./input.css -o ./dist/output.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}
